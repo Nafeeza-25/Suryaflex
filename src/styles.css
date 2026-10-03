@@ -198,7 +198,7 @@ button { cursor: pointer; }
 .mode-btn.static-btn.active { background: #442a1f; color: #ff9b76; border: 1px solid #75482e; }
 
 .hero-scene-container { border-radius: 8px; overflow: hidden; background: #05131d; }
-.hero-svg-canvas { width: 100%; height: auto; display: block; max-height: 400px; }
+.hero-svg-canvas { width: 100%; height: auto; display: block; }
 
 /* Bottom Split Row */
 .ref-bottom-split-row { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 14px; }
@@ -434,9 +434,12 @@ button, input, select { touch-action: manipulation; }
 .competition-view .static-btn .mode-selection { background: #45311e; border-color: #a67a40; }
 .competition-view .mode-btn.flex-btn.active { color: #8af4c8; }
 .competition-view .mode-btn.static-btn.active { color: #ffd299; }
-.competition-view .hero-svg-canvas { max-height: 350px; }
-.competition-view .hero-scene-container { background: #05131d; border-radius: 4px; }
+.competition-view .hero-svg-canvas { width: 100%; height: auto; }
+.competition-view .hero-scene-container { min-width: 0; max-width: 100%; background: #05131d; border-radius: 4px; }
+.competition-view .house-interactive-group:focus-visible { outline: none; }
 .competition-view .house-interactive-group:focus-visible rect { stroke: #7dd3fc; stroke-width: 3; }
+.competition-view .selected-house-cards-grid > * { min-width: 0; }
+.competition-view .mini-val { overflow-wrap: anywhere; word-break: break-word; }
 .competition-view .ref-bottom-split-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .competition-view .ref-bottom-split-row > * { min-width: 0; }
 .competition-view .selected-house-panel { grid-column: 1 / -1; order: 2; display: grid; grid-template-columns: 1.2fr 1fr; gap: 8px 18px; }
@@ -484,7 +487,6 @@ button, input, select { touch-action: manipulation; }
 .competition-view .btn-full-replay { margin-top: 0; }
 .competition-view .ref-bottom-bar { padding: 8px 18px; font-size: 10px; }
 @media (min-width: 1025px) and (max-height: 800px) {
-  .competition-view .hero-svg-canvas { max-height: 300px; }
   .competition-view .ref-summary-cards-row { padding-bottom: 0; }
   .competition-view .ref-title { font-size: 22px; }
 }
@@ -519,6 +521,7 @@ button, input, select { touch-action: manipulation; }
   .competition-view .ref-demo-callout-badge { justify-content: space-between; gap: 4px; }
   .competition-view .ref-bottom-split-row { grid-template-columns: minmax(0, 1fr); }
   .competition-view .selected-house-panel { grid-column: auto; grid-template-columns: minmax(0, 1fr); }
+  .competition-view .selected-house-cards-grid { min-width: 0; }
   .competition-view .ref-sidebar-right { grid-template-columns: minmax(0, 1fr); }
   .competition-view .ref-bottom-bar { flex-direction: column; align-items: flex-start; gap: 5px; }
   .scenario-control-grid { grid-template-columns: minmax(0, 1fr); }

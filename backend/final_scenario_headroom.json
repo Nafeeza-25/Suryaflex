@@ -1,0 +1,582 @@
+{
+  "scenario": "headroom",
+  "description": "Available-grid-headroom comparison",
+  "assumptions": {
+    "hour": 13,
+    "solarPenetration": 80,
+    "cloudCover": 8,
+    "demandMultiplier": 1.0,
+    "pv_capacity_scale": 1.0,
+    "pv_inverter_pf": 1.0,
+    "household_load_pf": 0.95,
+    "headroom_static_policy": "fixed 1.0 kW export cap per home",
+    "stress_static_policy": null,
+    "original_cigre_loads": "removed; replaced with aggregated gross demand for 100 homes on six residential load buses",
+    "kW_to_pandapower_mw": "divide by 1000"
+  },
+  "static": {
+    "pv_generation_kw": 512.1582917033526,
+    "household_demand_kw": 176.6427589253285,
+    "potential_solar_surplus_kw": 370.8440845630897,
+    "solar_exported_kw": 79.09243564587346,
+    "solar_curtailed_kw": 291.75164891721624,
+    "max_voltage_pu": 1.0026888440479251,
+    "min_voltage_pu": 0.9965273221092605,
+    "max_transformer_loading_pct": 12.17499077277149,
+    "max_line_loading_pct": 8.786542750051378,
+    "constraint_violations": [],
+    "households_curtailed": 76,
+    "average_curtailment_kw_per_household": 2.917516489172163,
+    "worst_household_curtailment_kw": 8.769117595071815,
+    "mean_curtailed_surplus_fraction": 0.6794821761593832,
+    "curtailment_inequality_stddev_percentage_points": 23.66561703242079,
+    "reverse_power_kw": 42.74416365931456,
+    "grid_import_kw": 0.0,
+    "grid_state": "safe",
+    "controller": {
+      "converged": true,
+      "outcome": "static_limit",
+      "iterations": 0,
+      "trace": [
+        {
+          "iteration": 0,
+          "exportKW": 79.09243564587346,
+          "maxVoltage": 1.0026888440479251,
+          "minVoltage": 0.9965273221092605,
+          "transformerLoading": 12.17499077277149,
+          "maxLineLoading": 8.786542750051378,
+          "safe": true
+        }
+      ]
+    },
+    "raw_ac_tables": {
+      "bus_voltages": [
+        {
+          "bus": 0,
+          "name": "Bus 0",
+          "voltage": 1.0
+        },
+        {
+          "bus": 1,
+          "name": "Bus R0",
+          "voltage": 1.0
+        },
+        {
+          "bus": 2,
+          "name": "Bus R1",
+          "voltage": 0.9965273221092605
+        },
+        {
+          "bus": 3,
+          "name": "Bus R2",
+          "voltage": 0.9967463406683592
+        },
+        {
+          "bus": 4,
+          "name": "Bus R3",
+          "voltage": 0.9969712102471144
+        },
+        {
+          "bus": 5,
+          "name": "Bus R4",
+          "voltage": 0.9972019268873027
+        },
+        {
+          "bus": 6,
+          "name": "Bus R5",
+          "voltage": 0.9974042746652834
+        },
+        {
+          "bus": 7,
+          "name": "Bus R6",
+          "voltage": 0.9976088381545006
+        },
+        {
+          "bus": 8,
+          "name": "Bus R7",
+          "voltage": 0.9976542115102153
+        },
+        {
+          "bus": 9,
+          "name": "Bus R8",
+          "voltage": 0.9977007870084484
+        },
+        {
+          "bus": 10,
+          "name": "Bus R9",
+          "voltage": 0.9977485644808494
+        },
+        {
+          "bus": 11,
+          "name": "Bus R10",
+          "voltage": 0.9978212292845909
+        },
+        {
+          "bus": 12,
+          "name": "Bus R11",
+          "voltage": 0.9969712102471144
+        },
+        {
+          "bus": 13,
+          "name": "Bus R12",
+          "voltage": 0.998874301288714
+        },
+        {
+          "bus": 14,
+          "name": "Bus R13",
+          "voltage": 1.0005615830860504
+        },
+        {
+          "bus": 15,
+          "name": "Bus R14",
+          "voltage": 1.0022636969908112
+        },
+        {
+          "bus": 16,
+          "name": "Bus R15",
+          "voltage": 1.0026888440479251
+        },
+        {
+          "bus": 17,
+          "name": "Bus R16",
+          "voltage": 0.9987451505062015
+        },
+        {
+          "bus": 18,
+          "name": "Bus R17",
+          "voltage": 0.9983882241529689
+        },
+        {
+          "bus": 19,
+          "name": "Bus R18",
+          "voltage": 0.9978212292845909
+        }
+      ],
+      "transformer_loadings": [
+        {
+          "transformer": 0,
+          "loading": 12.17499077277149
+        }
+      ],
+      "line_loadings": [
+        {
+          "line": 0,
+          "loading": 8.786542750051378
+        },
+        {
+          "line": 1,
+          "loading": 8.78654275005023
+        },
+        {
+          "line": 2,
+          "loading": 8.786542750050684
+        },
+        {
+          "line": 3,
+          "loading": 5.43632256507907
+        },
+        {
+          "line": 4,
+          "loading": 5.4363225650792755
+        },
+        {
+          "line": 5,
+          "loading": 3.9713084601817426
+        },
+        {
+          "line": 6,
+          "loading": 3.9713084601810382
+        },
+        {
+          "line": 7,
+          "loading": 3.9713084601798476
+        },
+        {
+          "line": 8,
+          "loading": 2.1239077490981595
+        },
+        {
+          "line": 9,
+          "loading": 0.0
+        },
+        {
+          "line": 10,
+          "loading": 3.360515726406511
+        },
+        {
+          "line": 11,
+          "loading": 3.3605157264066965
+        },
+        {
+          "line": 12,
+          "loading": 3.360515726406536
+        },
+        {
+          "line": 13,
+          "loading": 1.928526557084545
+        },
+        {
+          "line": 14,
+          "loading": 1.5322431331149842
+        },
+        {
+          "line": 15,
+          "loading": 1.8618859531036813
+        },
+        {
+          "line": 16,
+          "loading": 0.0
+        }
+      ]
+    }
+  },
+  "suryaflex": {
+    "pv_generation_kw": 512.1582917033526,
+    "household_demand_kw": 176.6427589253285,
+    "potential_solar_surplus_kw": 370.8440845630897,
+    "solar_exported_kw": 250.91465821039603,
+    "solar_curtailed_kw": 119.9294263526937,
+    "max_voltage_pu": 1.0499957957444712,
+    "min_voltage_pu": 0.9988513524313769,
+    "max_transformer_loading_pct": 34.02129225000495,
+    "max_line_loading_pct": 24.552752799531376,
+    "constraint_violations": [],
+    "households_curtailed": 80,
+    "average_curtailment_kw_per_household": 1.199294263526937,
+    "worst_household_curtailment_kw": 3.5844471254312325,
+    "mean_curtailed_surplus_fraction": 0.32199990607831264,
+    "curtailment_inequality_stddev_percentage_points": 3.73170693723607,
+    "reverse_power_kw": 207.79833376434811,
+    "grid_import_kw": 0.0,
+    "grid_state": "warning",
+    "controller": {
+      "converged": true,
+      "outcome": "safe_dynamic_allocation",
+      "iterations": 14,
+      "trace": [
+        {
+          "iteration": 0,
+          "exportKW": 370.8440845630897,
+          "maxVoltage": 1.0810690301166914,
+          "minVoltage": 1.0,
+          "transformerLoading": 50.88114155453278,
+          "maxLineLoading": 36.72030099049155,
+          "safe": false
+        },
+        {
+          "iteration": 1,
+          "exportKW": 163.2898697219228,
+          "maxVoltage": 1.0260473200595015,
+          "minVoltage": 0.9977095666971276,
+          "transformerLoading": 21.80000700317559,
+          "maxLineLoading": 15.732799889551712,
+          "safe": true
+        },
+        {
+          "iteration": 2,
+          "exportKW": 244.9348045828842,
+          "maxVoltage": 1.048394655058798,
+          "minVoltage": 0.9987773976503301,
+          "transformerLoading": 33.17618215580649,
+          "maxLineLoading": 23.942847123852783,
+          "safe": true
+        },
+        {
+          "iteration": 3,
+          "exportKW": 285.7572720133649,
+          "maxVoltage": 1.0592336771855357,
+          "minVoltage": 0.9992712315682086,
+          "transformerLoading": 38.946844288128226,
+          "maxLineLoading": 28.107463795529135,
+          "safe": false
+        },
+        {
+          "iteration": 4,
+          "exportKW": 265.34603829812454,
+          "maxVoltage": 1.053840775279111,
+          "minVoltage": 0.9990275285486108,
+          "transformerLoading": 36.06172041246031,
+          "maxLineLoading": 26.0253049862547,
+          "safe": false
+        },
+        {
+          "iteration": 5,
+          "exportKW": 255.14042144050438,
+          "maxVoltage": 1.051124458324967,
+          "minVoltage": 0.9989032755953898,
+          "transformerLoading": 34.61868551687001,
+          "maxLineLoading": 24.983884253992663,
+          "safe": false
+        },
+        {
+          "iteration": 6,
+          "exportKW": 250.0376130116943,
+          "maxVoltage": 1.0497612540679837,
+          "minVoltage": 0.9988405408941204,
+          "transformerLoading": 33.89732103605708,
+          "maxLineLoading": 24.463284282318888,
+          "safe": true
+        },
+        {
+          "iteration": 7,
+          "exportKW": 252.58901722609934,
+          "maxVoltage": 1.0504432790816869,
+          "minVoltage": 0.9988719591682088,
+          "transformerLoading": 34.257981209911875,
+          "maxLineLoading": 24.723568342990554,
+          "safe": false
+        },
+        {
+          "iteration": 8,
+          "exportKW": 251.3133151188968,
+          "maxVoltage": 1.0501023724778311,
+          "minVoltage": 0.9988562627800126,
+          "transformerLoading": 34.07764486207009,
+          "maxLineLoading": 24.59342179422804,
+          "safe": false
+        },
+        {
+          "iteration": 9,
+          "exportKW": 250.67546406529556,
+          "maxVoltage": 1.0499318397714263,
+          "minVoltage": 0.9988484050265327,
+          "transformerLoading": 33.987481288885476,
+          "maxLineLoading": 24.52835184014334,
+          "safe": true
+        },
+        {
+          "iteration": 10,
+          "exportKW": 250.99438959209618,
+          "maxVoltage": 1.0500171127464104,
+          "minVoltage": 0.9988523347003574,
+          "transformerLoading": 34.03256267239105,
+          "maxLineLoading": 24.560886526281394,
+          "safe": false
+        },
+        {
+          "iteration": 11,
+          "exportKW": 250.83492682869587,
+          "maxVoltage": 1.0499744779147215,
+          "minVoltage": 0.9988503700627521,
+          "transformerLoading": 34.010021878376435,
+          "maxLineLoading": 24.544619109412107,
+          "safe": true
+        },
+        {
+          "iteration": 12,
+          "exportKW": 250.91465821039603,
+          "maxVoltage": 1.0499957957444712,
+          "minVoltage": 0.9988513524313769,
+          "transformerLoading": 34.02129225000495,
+          "maxLineLoading": 24.552752799531376,
+          "safe": true
+        },
+        {
+          "iteration": 13,
+          "exportKW": 250.95452390124612,
+          "maxVoltage": 1.0500064543489116,
+          "minVoltage": 0.9988518435783219,
+          "transformerLoading": 34.02692745487499,
+          "maxLineLoading": 24.556819658344946,
+          "safe": false
+        },
+        {
+          "iteration": 14,
+          "exportKW": 250.93459105582107,
+          "maxVoltage": 1.0500011250725576,
+          "minVoltage": 0.9988515980079622,
+          "transformerLoading": 34.02410985085533,
+          "maxLineLoading": 24.55478622779444,
+          "safe": false
+        }
+      ]
+    },
+    "raw_ac_tables": {
+      "bus_voltages": [
+        {
+          "bus": 0,
+          "name": "Bus 0",
+          "voltage": 1.0
+        },
+        {
+          "bus": 1,
+          "name": "Bus R0",
+          "voltage": 1.0
+        },
+        {
+          "bus": 2,
+          "name": "Bus R1",
+          "voltage": 0.9988513524313769
+        },
+        {
+          "bus": 3,
+          "name": "Bus R2",
+          "voltage": 1.0036114417710211
+        },
+        {
+          "bus": 4,
+          "name": "Bus R3",
+          "voltage": 1.0083946026444464
+        },
+        {
+          "bus": 5,
+          "name": "Bus R4",
+          "voltage": 1.0132005083004028
+        },
+        {
+          "bus": 6,
+          "name": "Bus R5",
+          "voltage": 1.016126614012767
+        },
+        {
+          "bus": 7,
+          "name": "Bus R6",
+          "voltage": 1.0190608754335222
+        },
+        {
+          "bus": 8,
+          "name": "Bus R7",
+          "voltage": 1.020676599202386
+        },
+        {
+          "bus": 9,
+          "name": "Bus R8",
+          "voltage": 1.0222958013546897
+        },
+        {
+          "bus": 10,
+          "name": "Bus R9",
+          "voltage": 1.023918465388514
+        },
+        {
+          "bus": 11,
+          "name": "Bus R10",
+          "voltage": 1.0247697666527174
+        },
+        {
+          "bus": 12,
+          "name": "Bus R11",
+          "voltage": 1.0083946026444464
+        },
+        {
+          "bus": 13,
+          "name": "Bus R12",
+          "voltage": 1.0243214360201633
+        },
+        {
+          "bus": 14,
+          "name": "Bus R13",
+          "voltage": 1.0354645659842712
+        },
+        {
+          "bus": 15,
+          "name": "Bus R14",
+          "voltage": 1.0466291890513137
+        },
+        {
+          "bus": 16,
+          "name": "Bus R15",
+          "voltage": 1.0499957957444712
+        },
+        {
+          "bus": 17,
+          "name": "Bus R16",
+          "voltage": 1.0252503120157517
+        },
+        {
+          "bus": 18,
+          "name": "Bus R17",
+          "voltage": 1.028009626293754
+        },
+        {
+          "bus": 19,
+          "name": "Bus R18",
+          "voltage": 1.0247697666527174
+        }
+      ],
+      "transformer_loadings": [
+        {
+          "transformer": 0,
+          "loading": 34.02129225000495
+        }
+      ],
+      "line_loadings": [
+        {
+          "line": 0,
+          "loading": 24.552752798694772
+        },
+        {
+          "line": 1,
+          "loading": 24.55275279903194
+        },
+        {
+          "line": 2,
+          "loading": 24.552752799531376
+        },
+        {
+          "line": 3,
+          "loading": 14.88271774751427
+        },
+        {
+          "line": 4,
+          "loading": 14.882717747653862
+        },
+        {
+          "line": 5,
+          "loading": 8.997096076328699
+        },
+        {
+          "line": 6,
+          "loading": 8.997096076407413
+        },
+        {
+          "line": 7,
+          "loading": 8.997096076488925
+        },
+        {
+          "line": 8,
+          "loading": 4.6699573167803505
+        },
+        {
+          "line": 9,
+          "loading": 0.0
+        },
+        {
+          "line": 10,
+          "loading": 9.670044696529638
+        },
+        {
+          "line": 11,
+          "loading": 9.670044697357348
+        },
+        {
+          "line": 12,
+          "loading": 9.670044698578396
+        },
+        {
+          "line": 13,
+          "loading": 3.768578956448263
+        },
+        {
+          "line": 14,
+          "loading": 5.97611315153243
+        },
+        {
+          "line": 15,
+          "loading": 4.327443845112383
+        },
+        {
+          "line": 16,
+          "loading": 0.0
+        }
+      ]
+    }
+  },
+  "additional_export_enabled_pct": 217.24229524784798,
+  "curtailment_reduction_pct": 58.89331669665272,
+  "percentage_formulas": {
+    "additional_export_enabled_pct": "(SuryaFlex export - Static export) / Static export * 100",
+    "curtailment_reduction_pct": "(Static curtailment - SuryaFlex curtailment) / Static curtailment * 100"
+  },
+  "provenance": "Every grid voltage and loading value is from a converged pandapower AC solve (net.res_bus, net.res_trafo, net.res_line)."
+}

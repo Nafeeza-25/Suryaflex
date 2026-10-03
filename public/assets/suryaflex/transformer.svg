@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140">
+  <defs>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e4458" />
+      <stop offset="50%" stop-color="#122c3c" />
+      <stop offset="100%" stop-color="#0a1a26" />
+    </linearGradient>
+    <filter id="greenGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Shadow Base -->
+  <ellipse cx="70" cy="125" rx="55" ry="10" fill="#04121b" opacity="0.8" />
+
+  <!-- Transformer Main Tank Base -->
+  <rect x="30" y="45" width="80" height="70" rx="8" fill="url(#metalGrad)" stroke="#396c8a" stroke-width="2" />
+
+  <!-- Cooling Fins/Radiator Grille -->
+  <line x1="42" y1="55" x2="42" y2="105" stroke="#2b556e" stroke-width="3" stroke-linecap="round" />
+  <line x1="52" y1="55" x2="52" y2="105" stroke="#2b556e" stroke-width="3" stroke-linecap="round" />
+  <line x1="62" y1="55" x2="62" y2="105" stroke="#2b556e" stroke-width="3" stroke-linecap="round" />
+  <line x1="78" y1="55" x2="78" y2="105" stroke="#2b556e" stroke-width="3" stroke-linecap="round" />
+  <line x1="88" y1="55" x2="88" y2="105" stroke="#2b556e" stroke-width="3" stroke-linecap="round" />
+  <line x1="98" y1="55" x2="98" y2="105" stroke="#2b556e" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Center Indicator Gauge Dial -->
+  <circle cx="70" cy="70" r="10" fill="#091b27" stroke="#38bdf8" stroke-width="1.5" />
+  <circle cx="70" cy="70" r="3" fill="#2ee9a6" filter="url(#greenGlow)" />
+  <line x1="70" y1="70" x2="74" y2="65" stroke="#2ee9a6" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- High Voltage Bushings on Top -->
+  <rect x="40" y="25" width="8" height="20" rx="2" fill="#8fadba" stroke="#2b556e" stroke-width="1" />
+  <rect x="66" y="22" width="8" height="23" rx="2" fill="#8fadba" stroke="#2b556e" stroke-width="1" />
+  <rect x="92" y="25" width="8" height="20" rx="2" fill="#8fadba" stroke="#2b556e" stroke-width="1" />
+
+  <!-- Insulator Discs -->
+  <line x1="38" y1="30" x2="50" y2="30" stroke="#f4ba47" stroke-width="2" />
+  <line x1="38" y1="36" x2="50" y2="36" stroke="#f4ba47" stroke-width="2" />
+  <line x1="64" y1="28" x2="76" y2="28" stroke="#f4ba47" stroke-width="2" />
+  <line x1="64" y1="34" x2="76" y2="34" stroke="#f4ba47" stroke-width="2" />
+  <line x1="90" y1="30" x2="102" y2="30" stroke="#f4ba47" stroke-width="2" />
+  <line x1="90" y1="36" x2="102" y2="36" stroke="#f4ba47" stroke-width="2" />
+
+  <!-- Terminal Connectors -->
+  <circle cx="44" cy="22" r="2.5" fill="#f4ba47" />
+  <circle cx="70" cy="19" r="2.5" fill="#f4ba47" />
+  <circle cx="96" cy="22" r="2.5" fill="#f4ba47" />
+
+  <!-- Nameplate Badge -->
+  <rect x="48" y="92" width="44" height="14" rx="3" fill="#08141f" stroke="#2ee9a6" stroke-width="1" />
+  <text x="70" y="102" fill="#2ee9a6" font-size="8" font-family="monospace" font-weight="bold" text-anchor="middle">11kV / 0.4kV</text>
+</svg>

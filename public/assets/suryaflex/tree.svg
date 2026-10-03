@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 70" width="60" height="70">
+  <!-- Ground Shadow -->
+  <ellipse cx="30" cy="64" rx="20" ry="4" fill="#04121b" opacity="0.7" />
+  <!-- Trunk -->
+  <rect x="26" y="44" width="8" height="20" fill="#3a2517" rx="2" />
+  <!-- Canopy Layer 3 -->
+  <polygon points="30,8 10,48 50,48" fill="#1b4d3e" />
+  <!-- Canopy Layer 2 -->
+  <polygon points="30,16 14,40 46,40" fill="#236350" />
+  <!-- Canopy Layer 1 -->
+  <polygon points="30,24 18,34 42,34" fill="#2ee9a6" opacity="0.8" />
+</svg>

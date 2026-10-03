@@ -1,0 +1,12 @@
+fastapi==0.142.2
+uvicorn==0.54.0
+pandapower==3.5.5
+numpy==2.3.5
+scipy==1.18.1
+pandas==2.3.3
+pydantic==2.13.5
+networkx==3.7
+deepdiff==9.1.0
+geojson==3.3.0
+tqdm==4.70.1
+packaging==26.3

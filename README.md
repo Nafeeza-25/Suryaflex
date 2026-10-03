@@ -55,6 +55,16 @@ Copy-Item .env.example .env.local
 npm run dev
 ```
 
+### Start both with one command (Git Bash)
+
+After completing the one-time dependency setup above, open Git Bash in the project root and run:
+
+```bash
+bash ./dev.sh
+```
+
+This starts the backend at `http://127.0.0.1:8000` and the frontend at `http://localhost:5173`. Keep the terminal open while using the app; press **Ctrl+C** to stop the services.
+
 The local API URL defaults to `http://localhost:8000`; set `VITE_API_BASE_URL` to override it. The health endpoint is `GET /api/health`; `POST /api/compare` returns Static and SuryaFlex AC results for the supplied simulation state.
 
 ## Reproduce the scenarios
